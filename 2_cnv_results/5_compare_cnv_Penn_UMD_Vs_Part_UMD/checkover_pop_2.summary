@@ -1,0 +1,8 @@
+CNV_Value	Check_overlap	n	percent_total	percent_group
+0	Non-Overlap	267	0.2155	0.3541
+0	Overlap	487	0.3931	0.6459
+1	Overlap	59	0.0476	1
+3	Non-Overlap	19	0.0153	0.0465
+3	Overlap	390	0.3148	0.9535
+4	Non-Overlap	1	8e-04	0.0588
+4	Overlap	16	0.0129	0.9412

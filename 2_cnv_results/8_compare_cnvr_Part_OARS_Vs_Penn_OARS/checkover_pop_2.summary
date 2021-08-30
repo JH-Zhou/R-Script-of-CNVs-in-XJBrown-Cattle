@@ -1,0 +1,7 @@
+Type	Check_overlap	origi_length	num_CNVR	overlap_len	num_overlap_oppsite	prop_overlap_len	prop_num
+Gain	Non-Overlap	20998649	230	22385376	0	0.686	0.749
+Gain	Overlap	11630607	77	10243880	77	0.314	0.251
+Loss	Non-Overlap	41594237	357	41594237	0	0.736	0.771
+Loss	Overlap	14885116	106	13525598	106	0.239	0.229
+Mixed	Non-Overlap	27181614	91	27181614	0	0.446	0.565
+Mixed	Overlap	33779350	70	25521453	72	0.419	0.435

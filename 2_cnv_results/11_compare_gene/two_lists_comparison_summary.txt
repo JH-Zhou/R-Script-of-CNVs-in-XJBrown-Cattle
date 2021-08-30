@@ -1,0 +1,5 @@
+Common_Gene	n
+Common_High	20
+Common_Low	1635
+High_Freq_list_1	6
+High_Freq_list_2	11
