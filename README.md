@@ -3,6 +3,8 @@ This file inculdes the R Script, CNV lists and map files used for the post-analy
 
 To replicate our results, we first need to copy these documents into our local machine, and make sure we had the following R packages installed.
 
+We suggest opening the "RSript_of_CNVs_in_XJBrown_Cattle.Rmd" file through RStudio software, then we can run through each code chunks to get the results.
+
 ```{r}
 library(HandyCNV)
 library(data.table)
