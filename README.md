@@ -1,7 +1,7 @@
 # Introduction
-The documents inculde the R Script, CNV lists and map files used in the post-analysis of CNVs in XJBrown-Cattle.
+The documents inculde the R Script, CNV lists and map files used in the post-analysis of CNVs in XJBrown-Cattle's paper.
 
-To replicate our results, we first need to install and load the following R packages
+To replicate our results, we first need to copy these documents into our local machine, and make sure we had installed the following R packages.
 
 ```{r}
 library(HandyCNV)
