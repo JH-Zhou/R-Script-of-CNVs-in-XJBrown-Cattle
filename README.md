@@ -1,7 +1,7 @@
 # Introduction
-The documents inculde the R Script, CNV lists and map files used in the post-analysis of CNVs in XJBrown-Cattle's paper.
+This file inculdes the R Script, CNV lists and map files used for the post-analysis of CNVs in XJBrown-Cattle's paper.
 
-To replicate our results, we first need to copy these documents into our local machine, and make sure we had installed the following R packages.
+To replicate our results, we first need to copy these documents into our local machine, and make sure we had the following R packages installed.
 
 ```{r}
 library(HandyCNV)
@@ -9,7 +9,7 @@ library(data.table)
 library(dplyr)
 ```
 
-# 1.Coverting and comparing map fies between UMD and ARS versions
+# 1. Convert and compare map files between UMD and ARS versions
 ```{r results='hide'}
 #UMD Vs ARS
 convert_map(default_map = "1_map/XJB_CNV_UMD.map",
@@ -44,17 +44,20 @@ cnvr_plot(cnvr = cnvr_part_umd, assembly = "UMD",
 #get reference gene
 get_refgene()
 refgene_UMD <- get_refgene(gene_version = "Cow_UMD_UCSC")
+
 #annotate gene from UCSC reference gene list
 call_gene(refgene = refgene_UMD, 
           interval = cnvr_part_umd, 
           clean_cnv = clean_cnv_part_umd, 
           folder = "2_cnv_results/1_part_umd/call_gene")
+          
 #plot high frequent CNVR with genes
 cnvr_plot(cnvr = cnvr_part_umd, 
           clean_cnv = clean_cnv_part_umd, 
           sample_size = 365, gene_font_size = 2.2, common_cnv_threshold = 0.01, 
           refgene = refgene_UMD, col_gene = "yellow2", 
           folder = "2_cnv_results/1_part_umd/high_freq_cnvr")
+          
 #plot high frequent CNVR with related information
 #Note: This step not available because of signal and genotype too large to share
 # plot_cnvr_panorama(cnvr = cnvr_part_umd, 
@@ -247,7 +250,7 @@ compare_cnvr(cnvr_def = cnvr_part_ars,
 
 
 # 5. Customise visualiszing CNVs and CNVRs
-## 5.1 Visualisze CNVs in all chromosomes
+## 5.1 Visualisze CNVs on all chromosomes
 ```{r}
 #Part-UMD
 cnv_visual(clean_cnv = clean_cnv_part_umd, max_chr = 29, 
@@ -713,7 +716,7 @@ for (i in 1:length(gene_list)) {
   }
 ```
 
-# 11. Check if any CNVRs located in known false positive regions?
+# 11. Check if any CNVRs located in known false positive regions casued by genome assembly errors?
 There are 9 false positive CNVR regions caused by genome assembly errors, reported by following reference:
 Zhou, Y., Utsunomiya, Y., Xu, L. et al. Comparative analyses across cattle genders and breeds reveal the pitfalls caused by false positive and lineage-differential copy number variations. Sci Rep 6, 29219 (2016). https://doi.org/10.1038/srep29219
 ```{r}
