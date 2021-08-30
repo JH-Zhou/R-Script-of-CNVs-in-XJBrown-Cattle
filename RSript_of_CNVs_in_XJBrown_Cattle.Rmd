@@ -15,18 +15,18 @@ output:
   word_document:
     toc: yes
 abstract: |
-  The notebook records all code for the post-analysis of CNVs study in XJ-Brown cattle. 
+  The notebook records all code for the post-analysis of CNVs study in XJ-Brown cattle's paper. 
 ---
 
 
-To replicate our results, we first need to install and load the following R packages
+To replicate our results, we first need to copy these documents into our local machine, and make sure we had the following R packages installed.
 ```{r}
 library(HandyCNV)
 library(data.table)
 library(dplyr)
 ```
 
-# 1.Coverting and comparing map fies between UMD and ARS versions
+# 1.Convert and compare map files between UMD and ARS versions
 ```{r results='hide'}
 #UMD Vs ARS
 convert_map(default_map = "1_map/XJB_CNV_UMD.map",
